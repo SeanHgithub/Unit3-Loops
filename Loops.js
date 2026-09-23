@@ -10,40 +10,48 @@
 // ---------- Problem 1: Range Builder ----------
 // Return an array of every integer from start to end, inclusive.
 // Use a for loop and .push() to build the array one number at a time.
-function getNumbersInRange(start, end) {
-  // TODO: your code here
+/* function getNumbersInRange(x, y) {
+    let result = [];
+    for (let i= x; i<=y; i++) {
+        result.push(i);
+    }
+    return result
+} */
 
-}
-
-console.log(getNumbersInRange(1, 5));  // [1, 2, 3, 4, 5]
+/* console.log(getNumbersInRange(1, 5));  // [1, 2, 3, 4, 5]
 console.log(getNumbersInRange(10, 10)); // [10]
-console.log(getNumbersInRange(3, 8));  // [3, 4, 5, 6, 7, 8]
+console.log(getNumbersInRange(3, 8));  */ // [3, 4, 5, 6, 7, 8]
 
 
 // ---------- Problem 2: Sum a Range ----------
 // Return the sum of every integer from start to end, inclusive.
 // Use the accumulator pattern: let total = 0; total += i; each pass.
-function sumRange(start, end) {
-  // TODO: your code here
-
+/* function sumRange(x,y) {
+   let total = 0
+    for (let i= x; i<=y; i++) {
+        total += i
+    }
+    return total
 }
 
 console.log(sumRange(1, 5));   // 15
 console.log(sumRange(1, 100)); // 5050
-console.log(sumRange(4, 4));   // 4
+console.log(sumRange(4, 4));   // 4 */
 
 
 // ---------- Problem 3: Countdown ----------
 // Return an array counting down from n to 1.
 // Use a while loop, not a for loop.
-function countdown(n) {
-  // TODO: your code here
-
+/* function countdown(n) {
+  while (n >0) {
+        console.log(n);
+        n -=1;
+    }
 }
 
 console.log(countdown(5)); // [5, 4, 3, 2, 1]
 console.log(countdown(1)); // [1]
-console.log(countdown(8)); // [8, 7, 6, 5, 4, 3, 2, 1]
+console.log(countdown(8)); // [8, 7, 6, 5, 4, 3, 2, 1] */
 
 
 // ---------- Problem 4: Count the Vowels ----------
@@ -51,15 +59,21 @@ console.log(countdown(8)); // [8, 7, 6, 5, 4, 3, 2, 1]
 // Loop through every index of the string and use an if statement to
 // check whether that character is a vowel. Access a character with
 // str[i] or str.charAt(i).
-function countVowels(str) {
-  // TODO: your code here
-
+/* function countVowels(str) {
+      let count = 0;
+      for(let i = 0; i<str.length; i++) {
+        let char = str.charAt(i)
+        if (char === "a" || char ==="e" || char ==="i" || char ==="o" || char ==="u") {
+          count+=1
+        }
+    }
+    console.log(count)
 }
 
 console.log(countVowels("hello"));      // 2
 console.log(countVowels("javascript")); // 3
 console.log(countVowels("xyz"));        // 0
-console.log(countVowels("aeiou"));      // 5
+console.log(countVowels("aeiou"));      // 5 */
 
 
 // ---------- Problem 5: Multiplication Table ----------
@@ -67,9 +81,17 @@ console.log(countVowels("aeiou"));      // 5
 // one row per line (rows separated by "\n"). Each row shows n
 // products separated by spaces. Needs a loop inside a loop —
 // build each row as its own string before adding it to the result.
-function multiplicationTable(n) {
-  // TODO: your code here
-
+function multiplicationTable(n) { 
+  let table = ""   
+  let row = ""     
+  for(a = 1; a<=n; a++) {
+    for(b = 1; b<=n; b++) {
+      row += (a*b)
+    }
+    table += row + "\n"
+    let row = ""
+  }
+  return table
 }
 
 console.log(multiplicationTable(3));
