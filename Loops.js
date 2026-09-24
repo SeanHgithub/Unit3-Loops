@@ -81,22 +81,21 @@ console.log(countVowels("aeiou"));      // 5 */
 // one row per line (rows separated by "\n"). Each row shows n
 // products separated by spaces. Needs a loop inside a loop —
 // build each row as its own string before adding it to the result.
-function multiplicationTable(n) { 
-  let table = ""   
-  let row = ""     
+/* function multiplicationTable(n) { 
+  let table = ""        
   for(a = 1; a<=n; a++) {
+    let row = ""
     for(b = 1; b<=n; b++) {
       row += (a*b)
     }
-    table += row + "\n"
-    let row = ""
+    table += row + "\n";
   }
   return table
 }
 
 console.log(multiplicationTable(3));
 // "1 2 3\n2 4 6\n3 6 9"
-console.log(multiplicationTable(5));
+console.log(multiplicationTable(5)); */
 
 
 // ---------- Problem 6: Primes Under a Limit ----------
@@ -106,14 +105,27 @@ console.log(multiplicationTable(5));
 // to (but not including) that number and check
 // candidate % divisor === 0. A boolean flag that flips to false
 // when a divisor is found works well here.
-function primesUnder(limit) {
-  // TODO: your code here
-
+/* function primesUnder(lim) {
+  let primes = []
+  for (c = 2; c<lim; c++) {
+    let divisors = []
+    for(d = 2; d<c; d++) {
+      if (c % d === 0) {
+        divisors.push(d)
+      }
+    }
+    if (divisors.length === 0) {
+      primes.push(c);
+    } else {
+      continue
+    }
+  }
+  return primes
 }
 
 console.log(primesUnder(10)); // [2, 3, 5, 7]
 console.log(primesUnder(20)); // [2, 3, 5, 7, 11, 13, 17, 19]
-console.log(primesUnder(2));  // []
+console.log(primesUnder(2));  // [] */
 
 
 // ---------- Stretch (optional) ----------
@@ -124,5 +136,4 @@ function multiplicationTableSkipDiagonal(n) {
   // TODO: your code here
 
 }
-
 console.log(multiplicationTableSkipDiagonal(3));
